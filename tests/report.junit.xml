@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.062445">
+    <testsuite name="Creasi Test Suite" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.062445">
+      <testsuite name="Creasi\Tests\FooBarTest" file="/Users/fery/Workspace/Creasico/Package/tests/FooBarTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.062445">
+        <testcase name="it_should_be_true" class="Creasi\Tests\FooBarTest" classname="Creasi.Tests.FooBarTest" file="/Users/fery/Workspace/Creasico/Package/tests/FooBarTest.php" line="10" assertions="1" time="0.062445"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
