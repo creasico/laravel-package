@@ -2,12 +2,12 @@
     "name": "creasi/laravel-package",
     "description": "Laravel Package Template",
     "keywords": ["laravel", "package", "template"],
-    "type": "library",
     "license": "MIT",
+    "type": "project",
     "authors": [
         {
             "name": "Creasi.co",
-            "email": "supports@creasi.co"
+            "email": "hello@creasi.co"
         }
     ],
     "support": {
