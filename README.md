@@ -1,6 +1,6 @@
-[![Version](https://img.shields.io/packagist/v/creasico/laravel-package?style=flat-square)](https://packagist.org/packages/creasico/laravel-package)
-[![Lisence](https://img.shields.io/packagist/l/creasico/laravel-package?style=flat-square)](https://github.com/projek-xyz/php-lib-template/blob/master/LICENSE.md)
-[![Actions Status](https://img.shields.io/github/workflow/status/projek-xyz/php-lib-template/Tests/master?style=flat-square&logo=github-actions)](https://github.com/projek-xyz/php-lib-template/actions)
+[![Version](https://img.shields.io/packagist/v/creasi/laravel-package?style=flat-square)](https://packagist.org/packages/creasi/laravel-package)
+[![Lisence](https://img.shields.io/packagist/l/creasi/laravel-package?style=flat-square)](https://github.com/creasico/laravel-package/blob/master/LICENSE.md)
+[![Actions Status](https://img.shields.io/github/workflow/status/creasico/laravel-package/Tests/master?style=flat-square&logo=github-actions)](https://github.com/creasico/laravel-package/actions)
 
 # Laravel Package Template
 
@@ -11,7 +11,7 @@ Our Laravel Package Template
 Use [Composer](https://getcomposer.org/)
 
 ```bash
-$ composer create-project creasico/laravel-package --prefer-dist
+$ composer create-project creasi/laravel-package --prefer-dist
 ```
 
 ## Usage
