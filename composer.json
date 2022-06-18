@@ -41,6 +41,16 @@
         "preferred-install": "dist",
         "sort-packages": true
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Creasi\\Laravel\\PackageServiceProvider"
+            ],
+            "aliases": {
+                "Package": "Creasi\\Laravel\\Facades\\Package"
+            }
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }

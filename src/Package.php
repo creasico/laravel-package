@@ -2,7 +2,7 @@
 
 namespace Creasi\Laravel;
 
-class FooBar
+class Package
 {
     public function lorem(): string
     {
