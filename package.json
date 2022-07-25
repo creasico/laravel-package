@@ -1,19 +1,22 @@
 {
-    "private": true,
     "version": "0.0.0",
-    "author": "Creasico <hello@creasi.co>",
+    "private": true,
+    "packageManager": "pnpm@7.5.0",
+    "author": "Creasi Developers <developers@creasi.co>",
     "repository": "github:creasico/laravel-package",
     "scripts": {
+        "prepare": "husky install scripts/husky",
         "release": "standard-version -s"
     },
     "devDependencies": {
-        "@commitlint/cli": "^17.0.2",
-        "@feryardiant/commitlint-config": "^0.2.0",
-        "standard-version": "^9.0"
+        "@commitlint/cli": "^17.0.3",
+        "@commitlint/config-conventional": "^17.0.3",
+        "husky": "^8.0.1",
+        "standard-version": "^9.5.0"
     },
     "commitlint": {
         "extends": [
-            "@feryardiant/commitlint-config"
+            "@commitlint/config-conventional"
         ]
     },
     "standard-version": {}
