@@ -23,5 +23,32 @@ class ServiceProvider extends IlluminateServiceProvider
         });
 
         $this->app->alias(Package::class, 'creasi.package');
+
+        if ($this->app->runningInConsole()) {
+            $this->registerPublishables();
+
+            $this->registerCommands();
+        }
+    }
+
+    protected function registerPublishables()
+    {
+        $this->publishes([
+            self::LIB_PATH.'/config/package.php' => \config_path('package.php'),
+        ], 'creasi-config');
+
+        $timestamp = date('Y_m_d_His', time());
+        $migrations = self::LIB_PATH.'/database/migrations';
+
+        $this->publishes([
+            $migrations.'/create_package_table.php' => database_path('migrations/'.$timestamp.'_create_package_table.php'),
+        ], 'creasi-migrations');
+
+        $this->loadMigrationsFrom($migrations);
+    }
+
+    protected function registerCommands()
+    {
+        $this->commands([]);
     }
 }
