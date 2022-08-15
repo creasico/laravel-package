@@ -9,7 +9,7 @@ class PackageTest extends TestCase
     /** @test */
     public function it_should_be_true()
     {
-        $package = $this->app->get('package');
+        $package = $this->app->get('creasi.package');
 
         $this->assertInstanceOf(Package::class, $package);
 

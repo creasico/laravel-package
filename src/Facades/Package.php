@@ -8,6 +8,6 @@ class Package extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'package';
+        return 'creasi.package';
     }
 }
