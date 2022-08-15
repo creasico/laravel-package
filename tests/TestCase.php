@@ -11,14 +11,14 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            PackageServiceProvider::class
+            PackageServiceProvider::class,
         ];
     }
 
     protected function getPackageAliases($app)
     {
         return [
-            'package' => Package::class
+            'package' => Package::class,
         ];
     }
 }

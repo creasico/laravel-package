@@ -4,8 +4,7 @@
     },
     "editor.formatOnSave": false,
     "files.associations": {
-        "*.css": "postcss",
-        ".env.*": "env"
+        "*.css": "postcss"
     },
     "i18n-ally.localesPaths": [
         "resources/lang"
