@@ -4,7 +4,15 @@
 
 # Laravel Package Template
 
-**WIP**
+Our Laravel Package Template
+
+## Installation
+
+Use [Composer](https://getcomposer.org/)
+
+```bash
+$ composer create-project creasi/laravel-package --prefer-dist
+```
 
 ## License
 
