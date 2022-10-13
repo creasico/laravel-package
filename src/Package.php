@@ -2,10 +2,12 @@
 
 namespace Creasi\Laravel;
 
-class Package
+use Illuminate\Support\Facades\Facade;
+
+class Package extends Facade
 {
-    public function lorem(): string
+    protected static function getFacadeAccessor()
     {
-        return 'Lorem ipsum';
+        return 'creasi.package';
     }
 }

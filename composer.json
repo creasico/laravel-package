@@ -48,10 +48,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Creasi\\Laravel\\PackageServiceProvider"
+                "Creasi\\Laravel\\Package\\ServiceProvider"
             ],
             "aliases": {
-                "Package": "Creasi\\Laravel\\Facades\\Package"
+                "Package": "Creasi\\Laravel\\Package"
             }
         }
     },

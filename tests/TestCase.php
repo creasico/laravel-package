@@ -14,11 +14,4 @@ class TestCase extends Orchestra
             ServiceProvider::class,
         ];
     }
-
-    protected function getPackageAliases($app)
-    {
-        return [
-            'creasi.package' => Package::class,
-        ];
-    }
 }

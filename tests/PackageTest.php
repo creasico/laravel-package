@@ -11,8 +11,6 @@ class PackageTest extends TestCase
     {
         $package = $this->app->get('creasi.package');
 
-        $this->assertInstanceOf(Package::class, $package);
-
         $this->assertEquals('Lorem ipsum', $package->lorem());
     }
 }

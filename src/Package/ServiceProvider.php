@@ -18,11 +18,14 @@ class ServiceProvider extends IlluminateServiceProvider
     {
         $this->mergeConfigFrom(self::LIB_PATH.'/config/package.php', 'creasi.package');
 
-        $this->app->bind(Package::class, function () {
-            return new Package();
+        $this->app->bind('creasi.package', function () {
+            return new class {
+                public function lorem()
+                {
+                    return 'Lorem ipsum';
+                }
+            };
         });
-
-        $this->app->alias(Package::class, 'creasi.package');
 
         if ($this->app->runningInConsole()) {
             $this->registerPublishables();
