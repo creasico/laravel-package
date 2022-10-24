@@ -1,7 +1,12 @@
 {
     "recommendations": [
-        "lokalise.i18n-ally",
+        "amiralizadeh9480.laravel-extra-intellisense",
+        "bmewburn.vscode-intelephense-client",
         "cpylua.language-postcss",
-        "EditorConfig.EditorConfig"
+        "dbaeumer.vscode-eslint",
+        "editorconfig.editorconfig",
+        "github.vscode-pull-request-github",
+        "lokalise.i18n-ally",
+        "mikestead.dotenv",
     ]
 }
