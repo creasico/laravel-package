@@ -4,15 +4,10 @@ on:
   schedule: # scheduled to run at 23.00 on Saturday (UTC), means 6.00 on Monday (WIB)
     - cron: '0 23 * * 6'
   pull_request:
-    branches:
-      - master
+    branches: [master]
   push:
-    branches:
-      - master
-    paths:
-      - .github/workflows/test.yml
-      - src/*
-      - tests/*
+    branches: [master]
+    paths: ['.github/**.yml', 'src/*', 'tests/*']
 
 # env:
 #   COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
@@ -30,7 +25,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: ['8.0', '8.1']
+        php: ['8.0', '8.1', '8.2']
 
     steps:
       - name: Checkout
@@ -48,7 +43,7 @@ jobs:
         id: composer-cache
         run: |
           echo "GIT_BRANCH=$(echo ${GIT_BRANCH##*/} | tr / -)" >> $GITHUB_ENV
-          echo "::set-output name=dir::$(composer config cache-files-dir)"
+          echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: Cache Composer dependencies
         uses: actions/cache@v1
