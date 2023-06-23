@@ -18,7 +18,7 @@
             "pint --preset laravel"
         ],
         "test": [
-            "vendor/bin/phpunit --colors=always"
+            "vendor/bin/phpunit --colors=always --coverage-text"
         ]
     },
     "autoload": {
