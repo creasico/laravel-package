@@ -2,11 +2,11 @@
 
 namespace Creasi\Tests;
 
-use Creasi\Laravel\Package;
+use PHPUnit\Framework\Attributes\Test;
 
 class PackageTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function it_should_be_true()
     {
         $package = $this->app->get('creasi.package');
