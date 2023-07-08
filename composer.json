@@ -23,17 +23,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Creasi\\Laravel\\": "src"
+            "Creasi\\Package\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Creasi\\Tests\\": "tests"
+            "Creasi\\Tests\\": "tests",
+            "Database\\Factories\\": "database/factories/"
         }
     },
     "require": {
         "php": "^8.1",
-        "illuminate/contracts": "^8.0|^9.0|^10.0"
+        "illuminate/contracts": "^9.0|^10.0"
     },
     "require-dev": {
         "laravel/pint": "^1.1",
@@ -48,11 +49,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Creasi\\Laravel\\Package\\ServiceProvider"
-            ],
-            "aliases": {
-                "Package": "Creasi\\Laravel\\Package"
-            }
+                "Creasi\\Package\\ServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
