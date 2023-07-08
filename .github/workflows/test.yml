@@ -11,7 +11,7 @@ on:
 
 env:
   CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-  CC_TEST_REPORTER_URL: https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
+  CC_TEST_REPORTER_URL: ${{ vars.CC_TEST_REPORTER_URL }}
 
 jobs:
   tests:
