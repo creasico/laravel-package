@@ -13,9 +13,9 @@ env:
   DB_DATABASE: 'creasico'
   DB_USERNAME: 'creasico'
   DB_PASSWORD: 'secret'
-#   COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-#   CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-#   CC_TEST_REPORTER_URL: https://codeclimate.com/downloads/test-reporter/test-reporter-0.7.0-linux-amd64
+  # COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+  # CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+  # CC_TEST_REPORTER_URL: https://codeclimate.com/downloads/test-reporter/test-reporter-0.7.0-linux-amd64
 
 jobs:
   test-php:
@@ -135,7 +135,7 @@ jobs:
         id: prepare-env
         run: |
           echo "GIT_BRANCH=$(echo ${GIT_BRANCH##*/} | tr / -)" >> $GITHUB_ENV
-          echo "DB_DATABASE=$([[ $DB_CONNECTION == 'sqlite']] && echo $PWD/tests/base.sqlite || echo 'creasico')" >> $GITHUB_ENV
+          if [[ "$DB_CONNECTION" == 'sqlite' ]]; then DB_DATABASE="$PWD/tests/base.sqlite"; fi >> $GITHUB_ENV
 
       - name: Get Composer cache directory
         id: composer-cache
