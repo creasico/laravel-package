@@ -23,12 +23,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Creasi\\Laravel\\": "src"
+            "Creasi\\Package\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Creasi\\Tests\\": "tests"
+            "Creasi\\Tests\\": "tests",
+            "Database\\Factories\\": "database/factories/"
         }
     },
     "require": {
@@ -48,11 +49,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Creasi\\Laravel\\Package\\ServiceProvider"
-            ],
-            "aliases": {
-                "Package": "Creasi\\Laravel\\Package"
-            }
+                "Creasi\\Package\\ServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
