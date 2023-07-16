@@ -14,5 +14,7 @@ class SampleTest extends TestCase
         $model = Sample::factory()->createOne();
 
         $this->assertModelExists($model);
+
+        $this->assertEquals(env('DB_CONNECTION', 'sqlite'), $model->getConnectionName(), 'Should runs on the same connection');
     }
 }
