@@ -18,7 +18,10 @@
             "pint --preset laravel"
         ],
         "test": [
-            "vendor/bin/phpunit --colors=always --coverage-text"
+            "testbench package:test --coverage"
+        ],
+        "testbench": [
+            "testbench"
         ]
     },
     "autoload": {
@@ -34,13 +37,12 @@
     },
     "require": {
         "php": "^8.1",
-        "illuminate/contracts": "^9.0|^10.0"
+        "laravel/framework": "^9.0|^10.0"
     },
     "require-dev": {
         "laravel/pint": "^1.1",
-        "mockery/mockery": "^1.5",
-        "orchestra/testbench": "^8.5",
-        "phpunit/phpunit": "^10.1"
+        "nunomaduro/collision": "^7.4",
+        "orchestra/testbench": "^8.5"
     },
     "config": {
         "preferred-install": "dist",
