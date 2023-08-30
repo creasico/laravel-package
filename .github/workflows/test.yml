@@ -86,7 +86,7 @@ jobs:
             composer update --prefer-dist --no-interaction --no-progress
 
       - name: Run tests
-        run: composer test
+        run: composer test -- --coverage
 
       - name: Generate reports for CodeClimate
         env:
