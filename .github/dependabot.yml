@@ -9,12 +9,12 @@ updates:
     open-pull-requests-limit: 5
     versioning-strategy: increase-if-necessary
     groups:
+      dependencies:
+        dependency-type: "production"
+        patterns: ['*']
       dev-dependencies:
-        patterns:
-          - 'illuminate/*'
-          - 'laravel/*'
-          - 'orchestra/*'
-        update-types: [minor, patch]
+        dependency-type: "development"
+        patterns: ['*']
 
   - package-ecosystem: npm
     directory: "/"
@@ -24,9 +24,5 @@ updates:
     open-pull-requests-limit: 5
     versioning-strategy: increase-if-necessary
     groups:
-      dev-dependencies:
-        patterns:
-          - '@commitlint/*'
-          - 'husky'
-          - 'lint-staged'
-        update-types: [minor, patch]
+      dependencies:
+        patterns: ['*']
