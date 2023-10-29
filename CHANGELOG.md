@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/creasico/laravel-package/compare/v0.0.1...v0.0.2) (2023-10-29)
+
+
+### Features
+
+* **ci:** initialize auto labeler for all pull requests ([3e223ba](https://github.com/creasico/laravel-package/commit/3e223bab12c677076fcb595f40083dd825fc1193))
+* **ci:** update auto release config ([7825eaa](https://github.com/creasico/laravel-package/commit/7825eaa264d2dedf23ad5fa8c0d51afc489c2194))
+* migrate from `husky` to `simple-git-hooks` ([f8842d5](https://github.com/creasico/laravel-package/commit/f8842d5c8c9ab56e9acf6ef94edbed3d34a4cf2f)), closes [creasico/laravel-project#58](https://github.com/creasico/laravel-project/issues/58)
+
+
+### Bug Fixes
+
+* **ci:** update test workflows for pull requests ([973b170](https://github.com/creasico/laravel-package/commit/973b1703494f68389bcdd18e4687257ea41f7275)), closes [creasico/laravel-project#54](https://github.com/creasico/laravel-project/issues/54)
+
 ### 0.0.1 (2023-08-30)
 
 
