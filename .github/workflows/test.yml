@@ -3,7 +3,7 @@ name: Tests
 on:
   schedule: # scheduled to run at 23.00 on Saturday (UTC), means 6.00 on Monday (WIB)
     - cron: '0 23 * * 6'
-  pull_request_target:
+  pull_request:
     branches: [main]
   push:
     branches: [main]
@@ -19,8 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       DB_CONNECTION: ${{ matrix.db }}
-      DB_DATABASE: 'creasico'
-      DB_USERNAME: 'creasico'
+      DB_DATABASE: ${{ github.repository_owner }}
+      DB_USERNAME: ${{ github.repository_owner }}
       DB_PASSWORD: 'secret'
 
     services:
