@@ -1,29 +1,36 @@
-integration:
-- '.github/workflows/*.yml'
-- 'tests/Browser/**.php'
-
-docs:
-- '.env.example'
-- '**.md'
-
-deployment:
-- '.github/workflows/deploy.yml'
-- 'scripts/deploy.php'
-- 'scripts/deploy/**'
-
 api:
-- 'src/**.php'
-- 'routes/*.php'
-
-localization:
-- 'resources/lang/**'
-
-'ui/ux':
-- 'resources/views/**'
+- changed-files:
+  - any-glob-to-any-file: ['src/**.php', 'routes/*.php']
 
 'db: schema':
-- 'src/Models/**.php'
-- 'database/migrations/**.php'
+- changed-files:
+  - any-glob-to-any-file: ['src/Models/**.php', 'database/migrations/**.php']
+
+deployment:
+- changed-files:
+  - any-glob-to-any-file:
+    - '.github/workflows/deploy.yml'
+    - 'scripts/deploy.php'
+    - 'scripts/deploy/**'
+
+docs:
+- changed-files:
+  - any-glob-to-any-file: ['.env.example', '**.md']
 
 enhancement:
-- '**'
+- changed-files:
+  - any-glob-to-any-file: '**'
+
+integration:
+- changed-files:
+  - any-glob-to-any-file:
+    - '.github/workflows/*.yml'
+    - 'tests/Browser/**.php'
+
+localization:
+- changed-files:
+  - any-glob-to-any-file: 'resources/lang/**'
+
+'ui/ux':
+- changed-files:
+  - any-glob-to-any-file: 'resources/views/**'
