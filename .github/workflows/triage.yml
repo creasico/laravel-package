@@ -1,8 +1,6 @@
 name: Triage
 
-on:
-  pull_request_target:
-    types: [opened]
+on: [pull_request]
 
 jobs:
   labels:
@@ -14,8 +12,8 @@ jobs:
       pull-requests: write
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: actions/labeler@v4
+      - uses: actions/labeler@v5
         with:
           dot: true
