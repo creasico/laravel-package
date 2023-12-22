@@ -100,10 +100,10 @@ jobs:
           ./cc-test-reporter format-coverage -t clover -o $CODECLIMATE_REPORT $COVERAGE_FILE
 
       - name: Upload tests reports
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: github.actor != 'dependabot[bot]'
         with:
-          name: test-reports
+          name: test-reports-${{ matrix.php }}-${{ matrix.db }}
           path: tests/reports
 
   reports:
@@ -114,9 +114,10 @@ jobs:
 
     steps:
       - name: Download test reports
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          name: test-reports
+          pattern: test-reports-*
+          merge-multiple: true
 
       - name: Report to CodeClimate
         run: |
