@@ -103,7 +103,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: github.actor != 'dependabot[bot]'
         with:
-          name: test-reports-${{ matrix.php }}
+          name: test-reports-${{ matrix.php }}-${{ matrix.db }}
           path: tests/reports
 
   reports:
