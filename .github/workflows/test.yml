@@ -96,9 +96,11 @@ jobs:
           COVERAGE_FILE: tests/reports/clover.xml
           CODECLIMATE_REPORT: ${{ github.workspace }}/tests/reports/codeclimate.${{ matrix.php }}.json
         run: |
-          curl -LSs $CC_TEST_REPORTER_URL > ./cc-test-reporter && chmod +x ./cc-test-reporter
-          ./cc-test-reporter format-coverage -t clover -o $CODECLIMATE_REPORT $COVERAGE_FILE
-          echo "has-reports=1" >> $GITHUB_OUTPUT
+          if [[ -z \"$CC_TEST_REPORTER_URL\" ]]; then
+            curl -LSs $CC_TEST_REPORTER_URL > ./cc-test-reporter && chmod +x ./cc-test-reporter
+            ./cc-test-reporter format-coverage -t clover -o $CODECLIMATE_REPORT $COVERAGE_FILE
+            echo "has-reports=1" >> $GITHUB_OUTPUT
+          fi
 
       - name: Upload tests reports
         uses: actions/upload-artifact@v4

@@ -37,9 +37,7 @@ jobs:
 
       - name: Prepare environment
         id: prepare
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         run: |
           git config user.name "Creasi.HQ" && git config user.email "dev@creasi.co"
           echo "composer-cache=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
-          echo "should-reports=$(if [[ -z \"${CC_TEST_REPORTER_ID}\" ]]; then echo '0'; else echo '1'; fi)" >> $GITHUB_OUTPUT
+          echo "should-reports=$([[ -z \"$CC_TEST_REPORTER_ID\" ]] && echo '1')" >> $GITHUB_OUTPUT
