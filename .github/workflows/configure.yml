@@ -1,0 +1,54 @@
+name: Configure
+
+on:
+  workflow_call:
+    outputs:
+      composer-cache:
+        value: ${{ jobs.environment.outputs.composer-cache }}
+      should-reports:
+        value: ${{ jobs.environment.outputs.should-reports }}
+
+jobs:
+  labels:
+    name: Labels
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Labeler
+        uses: actions/labeler@v5
+        with:
+          dot: true
+
+  environment:
+    name: Configure
+    runs-on: ubuntu-latest
+    outputs:
+      composer-cache: ${{ steps.environment.outputs.composer-cache }}
+      should-reports: ${{ steps.environment.outputs.should-reports }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          tools: composer:v2
+          coverage: none
+
+      - name: Environment
+        id: environment
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        run: |
+          git config user.name "Creasi.HQ" && git config user.email "developers@creasi.co"
+          echo "composer-cache=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+          echo "should-reports=$([[ -z \"$CC_TEST_REPORTER_ID\" ]] && echo '1')" >> $GITHUB_OUTPUT
