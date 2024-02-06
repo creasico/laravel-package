@@ -52,6 +52,12 @@
         "nunomaduro/collision": "^7.4",
         "orchestra/testbench": "^8.5"
     },
+    "conflict": {
+        "symfony/css-selector": "7.x",
+        "symfony/event-dispatcher": "7.x",
+        "symfony/string": "7.x",
+        "symfony/stopwatch": "7.x"
+    },
     "config": {
         "preferred-install": "dist",
         "sort-packages": true
