@@ -12,7 +12,6 @@
 # .gitkeep            export-ignore
 # .github             export-ignore
 .github/README.md     export-ignore
-# .tool-versions      export-ignore
 # .vscode             export-ignore
 CHANGELOG.md          export-ignore
 composer.lock         export-ignore
