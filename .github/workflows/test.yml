@@ -104,7 +104,7 @@ jobs:
           COVERAGE_FILE: tests/reports/clover.xml
           CODECLIMATE_REPORT: tests/reports/codeclimate.${{ matrix.php }}.json
         run: |
-          if [[ -z \"$CC_TEST_REPORTER_URL\" ]]; then
+          if [[ -n \"$CC_TEST_REPORTER_URL\" ]]; then
             curl -LSs $CC_TEST_REPORTER_URL > ./cc-test-reporter && chmod +x ./cc-test-reporter
             ./cc-test-reporter format-coverage -t clover -o $CODECLIMATE_REPORT $COVERAGE_FILE
             echo "has-reports=1" >> $GITHUB_OUTPUT
