@@ -105,7 +105,7 @@ jobs:
         uses: actions/upload-artifact@v4
         if: needs.prepare.outputs.has-codeclimate == 'true'
         with:
-          name: test-reports-${{ matrix.php }}
+          name: test-reports-php${{ matrix.php }}-${{ matrix.db }}
           path: tests/reports
 
   reports:
