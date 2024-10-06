@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/creasico/laravel-package/compare/v0.0.4...v0.0.5) (2024-10-06)
+
+
+### Features
+
+* **ci:** update ci config to use workflow from `feryardiant/actions` ([#108](https://github.com/creasico/laravel-package/issues/108)) ([ff63e98](https://github.com/creasico/laravel-package/commit/ff63e987d23f6141728cb3f62fbc0fbd804fee20))
+
+
+### Bug Fixes
+
+* fix artifacts name conflicts ([96be3e8](https://github.com/creasico/laravel-package/commit/96be3e80f43d75ebc398bc36c3a22ed0c2bf932b))
+
 ### [0.0.4](https://github.com/creasico/laravel-package/compare/v0.0.3...v0.0.4) (2024-02-06)
 
 ### [0.0.3](https://github.com/creasico/laravel-package/compare/v0.0.2...v0.0.3) (2024-02-05)
