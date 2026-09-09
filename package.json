@@ -1,7 +1,7 @@
 {
     "version": "0.0.5",
     "private": true,
-    "packageManager": "pnpm@8.5.0",
+    "packageManager": "pnpm@12.2.1",
     "author": "Creasi Developers <developers@creasi.co>",
     "repository": "github:creasico/laravel-package",
     "scripts": {
@@ -9,10 +9,10 @@
         "release": "standard-version -s"
     },
     "devDependencies": {
-        "@commitlint/cli": "^18.2.0",
-        "@commitlint/config-conventional": "^18.1.0",
-        "lint-staged": "^15.0.2",
-        "simple-git-hooks": "^2.9.0",
+        "@commitlint/cli": "^21.2.2",
+        "@commitlint/config-conventional": "^21.2.2",
+        "lint-staged": "^17.5.0",
+        "simple-git-hooks": "^2.14.0",
         "standard-version": "^9.5.0"
     },
     "commitlint": {
