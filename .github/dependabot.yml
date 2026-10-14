@@ -6,19 +6,18 @@ updates:
     schedule:
       interval: monthly
       timezone: "Asia/Jakarta"
+    groups:
+      dependencies:
+        patterns: ['*']
 
   - package-ecosystem: composer
     directory: "/"
     schedule:
       interval: monthly
       timezone: "Asia/Jakarta"
-    versioning-strategy: lockfile-only
+    versioning-strategy: increase-if-necessary
     groups:
       dependencies:
-        dependency-type: "production"
-        patterns: ['*']
-      dev-dependencies:
-        dependency-type: "development"
         patterns: ['*']
 
   - package-ecosystem: npm
@@ -26,7 +25,7 @@ updates:
     schedule:
       interval: monthly
       timezone: "Asia/Jakarta"
-    versioning-strategy: lockfile-only
+    versioning-strategy: increase-if-necessary
     groups:
       dependencies:
         patterns: ['*']
