@@ -11,7 +11,7 @@ on:
 jobs:
   prepare:
     name: Prepare
-    uses: projek-xyz/actions/.github/workflows/prepare.yml@22d40bb8c8f18ea5bd59ec5680a5bd3d5a024697 # main @ 2026-10-14
+    uses: projek-xyz/actions/.github/workflows/prepare.yml@711af5ee0f1a28b1554022d28d3e147c6a9df1fe # main @ 2026-11-01
     with:
       php-version: ${{ vars.PHP_VERSION || '8.2' }}
     secrets:
@@ -114,6 +114,6 @@ jobs:
     name: Report Test Coverages
     needs: [prepare, tests]
     if: needs.prepare.outputs.should-reports == '1'
-    uses: projek-xyz/actions/.github/workflows/report.yml@22d40bb8c8f18ea5bd59ec5680a5bd3d5a024697 # main @ 2026-10-14
+    uses: projek-xyz/actions/.github/workflows/report.yml@711af5ee0f1a28b1554022d28d3e147c6a9df1fe # main @ 2026-11-01
     with:
       has-coveralls: ${{ needs.prepare.outputs.has-coveralls == '1' }}

@@ -8,6 +8,6 @@ on:
 jobs:
   publish:
     name: Publish Release
-    uses: projek-xyz/actions/.github/workflows/release.yml@22d40bb8c8f18ea5bd59ec5680a5bd3d5a024697 # main @ 2026-10-14
+    uses: projek-xyz/actions/.github/workflows/release.yml@711af5ee0f1a28b1554022d28d3e147c6a9df1fe # main @ 2026-11-01
     permissions:
       contents: write
